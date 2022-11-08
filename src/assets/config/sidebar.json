@@ -1,0 +1,18 @@
+[
+    {
+        "icon": "menu_info.png",
+        "text": "關卡資訊"
+    },
+    {
+        "icon": "menu_list.png",
+        "text": "作品列表"
+    },
+    {
+        "icon": "menu_strategy.png",
+        "text": "攻略資源"
+    },
+    {
+        "icon": "menu_job.png",
+        "text": "求職專區"
+    }
+]

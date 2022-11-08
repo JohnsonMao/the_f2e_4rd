@@ -1,0 +1,35 @@
+:root {
+    --primary-color: #007FAB;
+    --primary-dark-color: #003A4F;
+    --primary-tint-color: #B0D2DE;
+
+    --secondary-color: #FFC37D;
+    --secondary-dark-color: #A46039;
+    --secondary-tint-color: #FFE2A9;
+
+    --heightlight-color: #FF5136;
+    --heightlight-dark-color: #CD331A;
+    --heightlight-tint-color: #FFB5A4;
+
+    --black-color: black;
+    --gray-80-color: #333333;
+    --gray-60-color: #666666;
+    --gray-40-color: #999999;
+    --gray-20-color: #cccccc;
+    --white-color: white;
+
+    --red: #ff5136;
+    --orange: #ff8100;
+    --green: #7fbf62;
+
+    --rwd-width: 500px;
+
+    --top: 1000;
+}
+@mixin rwd($point) {
+	@if $point == mobile {
+		@media (max-width: 500px) {
+			@content
+		}
+	}
+}

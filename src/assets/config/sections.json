@@ -1,0 +1,216 @@
+[
+	{
+		"title": {
+			"tag": "h1",
+			"text": "互動式網頁設計"
+		},
+		"flex": 10,
+		"col": 4,
+		"list": [
+			[
+				{
+					"tag": "b",
+					"text": "前端工程師"
+				},
+				{
+					"tag": "b",
+					"prefixImg": "/common/personIcon.svg",
+					"prefixAlt": "person",
+					"prefixW": "22px",
+					"prefixStyle": {
+						"paddingRight": "8px"
+					},
+					"text": 920,
+					"bg": "primary",
+					"color": "white",
+					"style": {
+						"display": "flex",
+						"marginTop": "8px",
+						"padding": "4px 28px",
+						"borderRadius": "18px"
+					}
+				}
+			],
+			[
+				{
+					"tag": "b",
+					"text": "UI 設計師"
+				},
+				{
+					"tag": "b",
+					"prefixImg": "/common/personIcon.svg",
+					"prefixAlt": "person",
+					"prefixW": "22px",
+					"prefixStyle": {
+						"paddingRight": "8px"
+					},
+					"text": 110,
+					"bg": "primary",
+					"color": "white",
+					"style": {
+						"display": "flex",
+						"marginTop": "8px",
+						"padding": "4px 28px",
+						"borderRadius": "18px"
+					}
+				}
+			],
+			[
+				{
+					"tag": "b",
+					"text": "團體組"
+				},
+				{
+					"tag": "b",
+					"prefixImg": "/common/personIcon.svg",
+					"prefixAlt": "person",
+					"prefixW": "22px",
+					"prefixStyle": {
+						"paddingRight": "8px"
+					},
+					"text": 41,
+					"bg": "primary",
+					"color": "white",
+					"style": {
+						"display": "flex",
+						"marginTop": "8px",
+						"padding": "4px 28px",
+						"borderRadius": "18px"
+					}
+				}
+			]
+		],
+		"bg": [
+			{
+				"position": "centerY left",
+				"img": "/section0/bg_decorate_1.png"
+			},
+			{
+				"position": "centerY right",
+				"img": "/section0/bg_decorate_2.png"
+			}
+		]
+	},
+	{
+		"title": "你是否也有以下困擾？",
+		"list": [
+			{
+				"title": "羨慕別人的酷酷網頁動畫？",
+				"img": "/section1/question_1.png"
+			},
+			{
+				"title": "滿足不了同事的許願？",
+				"img": "/section1/question_2.png"
+			},
+			{
+				"title": "動畫技能樹太雜無從下手？",
+				"img": "/section1/question_3.png"
+			}
+		]
+	},
+	{
+		"title": "本屆主題：互動式網頁設計",
+		"subtitle": "以下兩個角色進行攜手合作",
+		"list": [
+			{
+				"title": "前端工程師",
+				"button": ""
+			},
+			{
+				"title": "UI 設計師",
+				"button": ""
+			},
+			{
+				"title": "團體組(UI + 前端)",
+				"button": ""
+			}
+		]
+	},
+	{
+		"title": "年度最強合作﹐三大主題來襲",
+		"subtitle": "各路廠商強強聯手\n共同設計出接地氣的網頁互動挑戰關卡",
+		"list": [
+			{
+				"title": "WEEK 1",
+				"subtitle": "The F2E 活動網站設計",
+				"tag": ["Parallax Scrolling", "#版塊設計"],
+				"img": "/section3/week_1.png"
+			},
+			{
+				"title": "WEEK 2",
+				"subtitle": "今晚，我想來點點簽",
+				"tag": ["Canvas", "#凱鈿行動科技"],
+				"img": "/section3/week_2.png"
+			},
+			{
+				"title": "WEEK 3",
+				"subtitle": "Scrum 新手村",
+				"tag": ["JS draggable", "#鈦坦科技"],
+				"img": "/section3/week_3.png"
+			}
+		]
+	},
+	{
+		"list": [
+			{
+				"title": "SIGN UP",
+				"subtitle": "10/13 - 11/6",
+				"text": "截止前可修改報名組別",
+				"button": ""
+			},
+			{
+				"title": "START",
+				"subtitle": "10/31 - 11/28",
+				"text": "10/31(一) UI、團體組開賽\n11/7(一) 前端組開賽",
+				"img": "/section4/start.png"
+			},
+			{
+				"title": "UPLOAD",
+				"subtitle": "10/31 - 11/28",
+				"text": "依賽程登錄作品\n額外競賽： 主題豐厚獎金等著你",
+				"img": "/section4/upload.png"
+			}
+		]
+	},
+	{
+		"scaleIn": "區區修練已經無法滿足了嗎？"
+	},
+	{
+		"title": "還有比賽在等著你！",
+		"list": [
+			{
+				"title": "評審機制",
+				"list": [
+					"初選： 將由六角學院前端、UI 評審進行第一波篩選。",
+					"決選： 由六角學院與贊助廠商討論，進行最後篩選，並於 12/30(五) 由評審進行直播公布名單！"
+				]
+			},
+			{
+				"title": "獎項",
+				"list": [
+					"1. 初選佳作 共六十位 數位獎狀",
+					"2. 個人企業獎 共六位 NTD 3,000 /位",
+					"3. 團體企業獎 共三組 NTD 10,000 /組",
+					"4. 以上皆提供完賽數位獎狀"
+				]
+			}
+		]
+	},
+	{
+		"title": "贊助單位",
+		"list": [
+			{
+				"title": "#版塊設計",
+				"img": "/section7/logo_blockstudio.png"
+			},
+			{
+				"title": "#鈦坦科技",
+				"img": "/section7/logo_titansoft.png"
+			},
+			{
+				"title": "#凱鈿科技",
+				"img": "/section7/logo_kdanmobile.png"
+			}
+		]
+	}
+]
