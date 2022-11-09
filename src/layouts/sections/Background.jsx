@@ -1,29 +1,39 @@
 import squiggly from '@/components/animations/SquigglyAnim';
+import { slowShake } from '@/components/animations/ShakeAnim';
 
 export default function Background({ section }) {
 	return (
 		<>
 			{Array.isArray(section.bg) &&
 				section.bg.map((bg, i) => (
-					<img
+					<div
 						key={i}
-						width="400"
-						src={import.meta.resolve(
-							`/src/assets/images/sections${bg.img}`
-						)}
-						alt="background"
-						className={[squiggly, 'scroll-bg', bg.position].join(
+						className={[squiggly, 'gsap-bg', bg.position].join(
 							' '
 						)}
 						style={{
 							position: 'fixed',
-							top: bg.position.includes('centerY') ? '33%' : '',
+							top: bg.position.includes('centerY') ? '36%' : '',
 							bottom: bg.position.includes('bottom') ? '0' : '',
-							left: bg.position.includes('left') ? '5%' : '',
-							right: bg.position.includes('right') ? '5%' : '',
-							zIndex: -2
+							left: bg.position.includes('left') ? '14%' : '',
+							right: bg.position.includes('right') ? '10%' : '',
+							width: i ? '25%' : '22%',
+							zIndex: -10,
+							userSelect: 'none'
 						}}
-					/>
+					>
+						<img
+							width="100%"
+							src={import.meta.resolve(
+								`/src/assets/images/sections${bg.img}`
+							)}
+							alt="background"
+							className={slowShake}
+							style={{
+								animationDelay: i + 's'
+							}}
+						/>
+					</div>
 				))}
 		</>
 	);

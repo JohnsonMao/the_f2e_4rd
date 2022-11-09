@@ -5,23 +5,25 @@ import User from './layout/User';
 import Sidebar from './layout/Sidebar';
 import JoinButton from './layout/JoinButton';
 import Map from './layout/Map';
-import Run from './layout/Run';
 
 export default React.forwardRef(({ children }, ref) => {
 	return (
-		<div ref={ref} className={layout}>
-			{children}
-			<Run />
+		<>
+			<Sidebar />
+			<div ref={ref} className={layout}>
+				{children}
+			</div>
 			<Logo />
 			<User />
 			<JoinButton />
 			<Map />
-			<Sidebar />
-		</div>
+		</>
 	);
 });
 
 const layout = css`
+	--layout-width: min(1024px, 80vw);
+	position: relative;
 	margin: 0 auto;
-	width: 60%;
+	width: var(--layout-width);
 `;

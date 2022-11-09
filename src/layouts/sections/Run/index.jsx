@@ -10,7 +10,6 @@ import ReadyGo from './ReadyGo';
 export default function Run() {
 	return (
 		<>
-			<ReadyGo />
 			<div className={[squiggly, runStyle].join(' ')}>
 				<Start />
 				<img src={Road} alt="road" />
@@ -18,6 +17,7 @@ export default function Run() {
 				<img className="character team" src={Team_gif} alt="團體組" />
 				<img className="character ui" src={UI_gif} alt="UI 設計師" />
 			</div>
+			<ReadyGo />
 		</>
 	);
 }
@@ -27,10 +27,11 @@ const runStyle = css`
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: -1;
 
 	img {
 		display: block;
-		width: 100%;
+		width: var(--layout-width);
 	}
 	.character {
 		--width: 30%;

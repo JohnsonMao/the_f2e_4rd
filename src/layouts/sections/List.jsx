@@ -5,11 +5,11 @@ export default function List({ section }) {
 	const col = section.col ? 'col' : '';
 
 	return (
-		<ul className={cx(flex, flexWidth)}>
+		<ul className={cx(container, flex, flexWidth)}>
 			{section.list.map((item, index) => (
 				<li
 					key={index}
-					className={[flex, col].join(' ')}
+					className={[flex, col, 'gsap-text'].join(' ')}
 					style={{
 						'--col': section.col
 					}}
@@ -51,6 +51,8 @@ const flex = css`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-bottom: 15%;
+	z-index: 10;
 
 	.col {
 		flex: 1 0 calc(100% / var(--col));
@@ -58,13 +60,19 @@ const flex = css`
 	}
 `;
 
+const container = css`
+	position: fixed;
+	height: 100vh;
+`
+
 const flex10 = css`
 	margin: 0 auto;
-	width: 83.33%;
-	height: 100vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(var(--layout-width) * 0.8);
 `;
 
 const flex12 = css`
-	width: 100%;
-	height: 100vh;
+	left: 0;
+	width: var(--layout-width);
 `;
