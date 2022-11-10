@@ -3,7 +3,7 @@ import Road from '@images/layouts/run/road.png';
 import F2E_gif from '@images/layouts/run/character_f2e.gif';
 import UI_gif from '@images/layouts/run/character_ui.gif';
 import Team_gif from '@images/layouts/run/character_team.gif';
-import squiggly from '@/components/animations/SquigglyAnim';
+import squiggly from '@styles/animations/SquigglyAnim';
 import Start from './Start';
 import ReadyGo from './ReadyGo';
 

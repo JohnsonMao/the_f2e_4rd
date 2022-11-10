@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 import Hand from '@images/layouts/common/btn_join_hand.png';
 import Btn from '@images/layouts/common/btn_join.png';
-import { fastShake } from '@/components/animations/ShakeAnim';
+import { fastShake } from '@styles/animations/ShakeAnim';
 
 export default function JoinButton() {
 	return (

@@ -1,27 +1,30 @@
-import { useLayoutEffect, useState, useRef } from 'react';
+import { useLayoutEffect, useState, useRef, useMemo, useCallback } from 'react';
 import { gsap } from 'gsap';
 
-const useGsapTimeline = (trigger, start, end) => {
-    const elementRef = useRef(null);
-    const [timeline, setTimeline] = useState(null);
+const useGsapTimeline = ({ trigger, markers, start, end, scrub }) => {
+	const elementRef = useRef(null);
+	const [timeline, setTimeline] = useState(null);
+	const scrollTrigger = useMemo(
+		() => ({
+			markers: markers ?? import.meta.env.DEV,
+			scrub: scrub ?? true,
+			trigger,
+			start,
+			end
+		}),
+		[trigger, markers, start, end, scrub]
+	);
 
 	useLayoutEffect(() => {
 		const ctx = gsap.context(() => {
-			setTimeline(gsap.timeline({
-				scrollTrigger: {
-					trigger,
-					markers: import.meta.env.DEV,
-					start: start || 'bottom 100%',
-					end: end || 'bottom 5%',
-					scrub: true
-				}
-			}));
+			const tl = gsap.timeline({ scrollTrigger });
+			setTimeline(tl);
 		}, elementRef);
 
 		return () => ctx.revert();
-	}, [trigger, start, end]);
+	}, [scrollTrigger]);
 
-    return [elementRef, timeline]
+	return [elementRef, timeline];
 };
 
 export default useGsapTimeline;

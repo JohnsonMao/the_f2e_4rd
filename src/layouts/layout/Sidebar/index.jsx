@@ -4,7 +4,7 @@ import { css, cx } from '@linaria/core';
 import MenuControl from '@images/layouts/sidebar/menu_control.png';
 import { ReactComponent as Right } from '@images/layouts/sidebar/right.svg';
 import sidebarConfig from '@/assets/config/sidebar.json';
-import squiggly from '@/components/animations/SquigglyAnim';
+import squiggly from '@styles/animations/SquigglyAnim';
 
 export default function Sidebar() {
 	const [isOpen, setIsOpen] = useState(false);

@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'GenJyuuGothic-P';
+    src: url('./fonts/GenJyuuGothic-P-Normal.woff2') format('woff2'),
+        url('./fonts/GenJyuuGothic-P-Normal.woff') format('woff');
+}
+
+* {
+	cursor: auto;
+    font-family: GenJyuuGothic-P, sans-serif;
+}
+
+body {
+    font-family: GenJyuuGothic-P, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 160%;
+    background-color: var(--secondary-color);
+    min-height: 100vh;
+    color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, b {
+    font-weight: bold;
+}
+
+h1 {
+    position: fixed;
+    left: 50%;
+    bottom: 66vh;
+    padding: 10px 40px;
+    font-size: 32px;
+    color: white;
+    background-color: var(--heightlight-color);
+    border-radius: 26px;
+    transform: translateX(-50%);
+}
+
+h2 {
+    position: relative;
+    margin: 0 auto;
+    padding: 28px 0;
+    width: max-content;
+    font-size: 60px;
+    background-image: url(../images/layouts/title/bg_talking_c.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 600px 102px;
+}
+h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    background-image: url(../images/layouts/title/bg_talking_l.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 102px;
+}
+h2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-image: url(../images/layouts/title/bg_talking_r.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 102px;
+}
+
+h3 {
+    font-size: 44px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5, b {
+    font-size: 24px;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    h4 {
+        font-size: 20px;
+    }
+    
+    h5, b {
+        font-size: 18px;
+    }
+}

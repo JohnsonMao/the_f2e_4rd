@@ -1,10 +1,11 @@
-import User from '@images/layouts/common/user.png';
 import { css } from '@linaria/core';
+import User from '@images/layouts/common/user.png';
+import Img from '@/components/Img';
 
 export default function Header() {
 	return (
 		<a href="/" className={userStyle}>
-			<img src={User} alt="User button" />
+			<Img src={User} alt="User button" />
 		</a>
 	);
 }

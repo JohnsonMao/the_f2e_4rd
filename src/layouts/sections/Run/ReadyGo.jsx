@@ -1,50 +1,39 @@
-import { useContext, useEffect, useLayoutEffect, useState } from 'react';
-import { styled } from '@linaria/react';
+import { useLayoutEffect } from 'react';
+import { css } from '@linaria/core';
 import { SteppedEase } from 'gsap';
 import readyFramePng from '@images/sections/section0/ready_frame.png';
-import squiggly from '@/components/animations/SquigglyAnim';
-import { SectionTimeline } from '@/App';
+import squiggly from '@styles/animations/SquigglyAnim';
 import { useGsapTimeline } from '@/hooks';
+import Img from '@/components/Img';
 
 export default function ReadyGo() {
-	const [ref, tl] = useGsapTimeline('[data-type="ready"]', 'bottom 40%', 'bottom -10%');
-	// const tl = useContext(SectionTimeline);
-	const [scrolled, setScrolled] = useState(false);
-	const animationPlayState = scrolled ? 'running' : 'paused';
-
-	useEffect(() => {
-		const scrollStart = () => setScrolled(true);
-
-		if (!scrolled) window.addEventListener('scroll', scrollStart);
-
-		return () => {
-			if (!scrolled) window.removeEventListener('scroll', scrollStart);
-		};
-	}, [scrolled]);
-
 	const ready = 'ready';
+	const trigger = `[data-type="${ready}"]`;
+	const [ref, tl] = useGsapTimeline({
+		trigger,
+		markers: false,
+		start: 'bottom 50%',
+		end: 'bottom 0%'
+	});
 
 	useLayoutEffect(() => {
-		const trigger = `[data-type="${ready}"]`;
-
 		if (tl) {
-			tl.from(trigger, {
+			tl.fromTo(trigger, {
 				ease: SteppedEase.config(1),
 				'--red': '#ff5136',
 				'--orange': '#ff8100',
 				'--green': '#7fbf62',
 				'--content': '"READY?"'
+			}, {
+				duration: 25,
+				ease: SteppedEase.config(1),
+				'--red': '#ff5136',
+				'--orange': 'transparent',
+				'--green': 'transparent',
+				'--content': ''
 			})
 				.to(trigger, {
-					duration: 10,
-					ease: SteppedEase.config(1),
-					'--red': '#ff5136',
-					'--orange': 'transparent',
-					'--green': 'transparent',
-					'--content': ''
-				})
-				.to(trigger, {
-					duration: 10,
+					duration: 25,
 					ease: SteppedEase.config(1),
 					'--red': 'transparent',
 					'--orange': '#ff8100',
@@ -52,7 +41,7 @@ export default function ReadyGo() {
 					'--content': ''
 				})
 				.to(trigger, {
-					duration: 10,
+					duration: 25,
 					ease: SteppedEase.config(1),
 					'--red': 'transparent',
 					'--orange': 'transparent',
@@ -67,57 +56,37 @@ export default function ReadyGo() {
 					'--content': '"GO!!"'
 				})
 				.to(trigger, {
-					duration: 20,
+					duration: 25,
 					'--red': 'transparent',
 					'--orange': 'transparent',
 					'--green': '#7fbf62',
 					'--content': '"GO!!"',
-					scale: 0.2,
+					'--blur': '5px',
+					scale: 0.4,
 					autoAlpha: 0,
 					ease: 'sine',
 					zIndex: -20,
 					force3D: false,
-					xPercent: 40,
+					xPercent: 30,
 					yPercent: 40
 				});
 		}
-
-		// const scrollListener = ScrollTrigger.create({
-		// 	trigger,
-		// 	start: 'top 50%',
-		// 	end: 'bottom 0%',
-		// 	scrub: true,
-		// 	markers: true,
-		// 	onEnter: function () {
-		// 		// show(trigger);
-		// 	},
-		// 	onLeave: function () {
-		// 		// hide(trigger);
-		// 	},
-		// 	onEnterBack: function () {
-		// 		// show(trigger);
-		// 	},
-		// 	onLeaveBack: function () {
-		// 		// hide(trigger);
-		// 	}
-		// });
-		// return () => scrollListener.revert();
-	}, [tl]);
+	}, [tl, ref]);
 
 	return (
 		<div ref={ref}>
-			<ReadyFrameStyle style={{ animationPlayState }} data-type={ready}>
-				<img
+			<div className={readyFrameStyle} data-type={ready}>
+				<Img
 					className={squiggly}
 					src={readyFramePng}
 					alt="Are you ready?"
 				/>
-			</ReadyFrameStyle>
+			</div>
 		</div>
 	);
 }
 
-const ReadyFrameStyle = styled.div`
+const readyFrameStyle = css`
 	--width: 20vw;
 
 	width: var(--width);

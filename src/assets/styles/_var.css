@@ -18,14 +18,5 @@
     --gray-20-color: #cccccc;
     --white-color: white;
 
-    --rwd-width: 500px;
-
     --top: 1000;
-}
-@mixin rwd($point) {
-	@if $point == mobile {
-		@media (max-width: 500px) {
-			@content
-		}
-	}
 }
