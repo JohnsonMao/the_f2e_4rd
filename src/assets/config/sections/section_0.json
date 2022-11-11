@@ -1,0 +1,92 @@
+{
+    "title": {
+        "tag": "h1",
+        "text": "互動式網頁設計"
+    },
+    "flex": 10,
+    "col": 4,
+    "list": [
+        [
+            {
+                "tag": "b",
+                "text": "前端工程師"
+            },
+            {
+                "tag": "b",
+                "prefixImg": "/common/personIcon.svg",
+                "prefixAlt": "person",
+                "prefixW": "22px",
+                "prefixStyle": {
+                    "paddingRight": "8px"
+                },
+                "text": 920,
+                "bg": "primary",
+                "color": "white",
+                "className": "pill",
+                "style": {
+                    "display": "flex",
+                    "marginTop": "8px",
+                    "padding": "4px 28px"
+                }
+            }
+        ],
+        [
+            {
+                "tag": "b",
+                "text": "UI 設計師"
+            },
+            {
+                "tag": "b",
+                "prefixImg": "/common/personIcon.svg",
+                "prefixAlt": "person",
+                "prefixW": "22px",
+                "prefixStyle": {
+                    "paddingRight": "8px"
+                },
+                "text": 110,
+                "bg": "primary",
+                "color": "white",
+                "className": "pill",
+                "style": {
+                    "display": "flex",
+                    "marginTop": "8px",
+                    "padding": "4px 28px"
+                }
+            }
+        ],
+        [
+            {
+                "tag": "b",
+                "text": "團體組"
+            },
+            {
+                "tag": "b",
+                "prefixImg": "/common/personIcon.svg",
+                "prefixAlt": "person",
+                "prefixW": "22px",
+                "prefixStyle": {
+                    "paddingRight": "8px"
+                },
+                "text": 41,
+                "bg": "primary",
+                "color": "white",
+                "className": "pill",
+                "style": {
+                    "display": "flex",
+                    "marginTop": "8px",
+                    "padding": "4px 28px"
+                }
+            }
+        ]
+    ],
+    "bg": [
+        {
+            "position": "centerY left",
+            "img": "/section0/bg_decorate_1.png"
+        },
+        {
+            "position": "centerY right",
+            "img": "/section0/bg_decorate_2.png"
+        }
+    ]
+}

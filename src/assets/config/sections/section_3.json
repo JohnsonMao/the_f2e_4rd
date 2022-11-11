@@ -1,0 +1,24 @@
+{
+    "title": "年度最強合作﹐三大主題來襲",
+    "subtitle": "各路廠商強強聯手\n共同設計出接地氣的網頁互動挑戰關卡",
+    "list": [
+        {
+            "title": "WEEK 1",
+            "subtitle": "The F2E 活動網站設計",
+            "tag": ["Parallax Scrolling", "#版塊設計"],
+            "img": "/section3/week_1.png"
+        },
+        {
+            "title": "WEEK 2",
+            "subtitle": "今晚，我想來點點簽",
+            "tag": ["Canvas", "#凱鈿行動科技"],
+            "img": "/section3/week_2.png"
+        },
+        {
+            "title": "WEEK 3",
+            "subtitle": "Scrum 新手村",
+            "tag": ["JS draggable", "#鈦坦科技"],
+            "img": "/section3/week_3.png"
+        }
+    ]
+}

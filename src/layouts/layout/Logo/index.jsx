@@ -17,7 +17,7 @@ export default function Logo() {
 					start: 'top 100%',
 					end: 'bottom -90%',
 					scrub: true,
-					markers: true,
+					markers: false,
 					onEnter: function () {
 						hide(element);
 					},

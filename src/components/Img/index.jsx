@@ -1,26 +1,11 @@
 import { styled } from '@linaria/react';
-import { useEffect, useRef } from 'react';
 
 export default function Img(props) {
-	const { src } = props;
-	const isFirst = useRef(true);
+	const setComplete = (e) => {
+		console.log(e.target);
+	};
 
-	useEffect(() => {
-		if (isFirst.current) {
-			let image = new Image();
-			const setComplete = (e) => {
-				console.log(e.target);
-				image = null;
-			};
-
-			image.onload = setComplete;
-			image.onerror = setComplete;
-			image.src = src;
-			isFirst.current = false;
-		}
-	}, [src]);
-
-	return <ImgContainer {...props} />;
+	return <ImgContainer {...props} onLoad={setComplete} onError={setComplete} />;
 }
 
 const ImgContainer = styled.img`

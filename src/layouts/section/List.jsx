@@ -21,6 +21,7 @@ export default function List({ section }) {
 							return (
 								<Tag
 									key={i}
+									className={t.className}
 									style={{
 										background: `var(--${t.bg}-color)`,
 										color: `var(--${t.color}-color)`,
@@ -57,18 +58,16 @@ const flex = css`
 	.col {
 		flex: 1 0 calc(100% / var(--col));
 		flex-direction: column;
+		border: 1px solid #0006;
 	}
 `;
 
 const container = css`
-	position: fixed;
 	height: 100vh;
 `
 
 const flex10 = css`
 	margin: 0 auto;
-	left: 50%;
-	transform: translateX(-50%);
 	width: calc(var(--layout-width) * 0.8);
 `;
 

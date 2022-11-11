@@ -1,1 +1,1 @@
-export { default as useGsapTimeline } from './useGsapTimeline';
+export { default as useTimeline } from './useTimeline';

@@ -34,11 +34,12 @@ const runStyle = css`
 		width: var(--layout-width);
 	}
 	.character {
-		--width: 30%;
+		--width: min(30%, 30vh);
 		position: absolute;
 		left: 50%;
 		bottom: 10px;
 		width: var(--width);
+		filter: drop-shadow(2px 4px 6px #0008);
 	}
 
 	.f2e {

@@ -23,7 +23,7 @@ const startStyle = css`
 `;
 
 const logoTextStyle = css`
-	position: fixed;
+	position: absolute;
 	height: 25vh;
 	bottom: 72vh;
 	object-fit: contain;

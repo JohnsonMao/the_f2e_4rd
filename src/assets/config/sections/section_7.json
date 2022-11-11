@@ -1,0 +1,17 @@
+{
+    "title": "贊助單位",
+    "list": [
+        {
+            "title": "#版塊設計",
+            "img": "/section7/logo_blockstudio.png"
+        },
+        {
+            "title": "#鈦坦科技",
+            "img": "/section7/logo_titansoft.png"
+        },
+        {
+            "title": "#凱鈿科技",
+            "img": "/section7/logo_kdanmobile.png"
+        }
+    ]
+}

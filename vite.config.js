@@ -1,5 +1,3 @@
-import { fileURLToPath, URL } from 'node:url';
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import linaria from '@linaria/rollup';
@@ -11,7 +9,7 @@ export default defineConfig(({ mode }) => {
 	const isDev = mode === 'development';
 
 	return {
-		base: isDev ? '/' : '/example-vite-react/',
+		base: isDev ? './' : '/the_f2e_4rd/',
 		plugins: [
 			nodeResolve({
 				extensions: ['.jsx', '.js']
@@ -50,13 +48,9 @@ export default defineConfig(({ mode }) => {
 		},
 		resolve: {
 			alias: {
-				'@': fileURLToPath(new URL('./src', import.meta.url)),
-				'@images': fileURLToPath(
-					new URL('./src/assets/images', import.meta.url)
-				),
-				'@styles': fileURLToPath(
-					new URL('./src/assets/styles', import.meta.url)
-				)
+				'@': '/src',
+				'@images': '/src/assets/images',
+				'@styles': '/src/assets/styles'
 			}
 		},
 		server: {

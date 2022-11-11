@@ -1,0 +1,22 @@
+{
+    "list": [
+        {
+            "title": "SIGN UP",
+            "subtitle": "10/13 - 11/6",
+            "text": "截止前可修改報名組別",
+            "button": ""
+        },
+        {
+            "title": "START",
+            "subtitle": "10/31 - 11/28",
+            "text": "10/31(一) UI、團體組開賽\n11/7(一) 前端組開賽",
+            "img": "/section4/start.png"
+        },
+        {
+            "title": "UPLOAD",
+            "subtitle": "10/31 - 11/28",
+            "text": "依賽程登錄作品\n額外競賽： 主題豐厚獎金等著你",
+            "img": "/section4/upload.png"
+        }
+    ]
+}

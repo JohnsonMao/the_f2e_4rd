@@ -21,64 +21,27 @@ body {
 
 h1, h2, h3, h4, h5, b {
     font-weight: bold;
+    font-size: var(--fz);
 }
 
 h1 {
-    position: fixed;
-    left: 50%;
-    bottom: 66vh;
-    padding: 10px 40px;
-    font-size: 32px;
-    color: white;
-    background-color: var(--heightlight-color);
-    border-radius: 26px;
-    transform: translateX(-50%);
+    --fz: 32px;
 }
 
 h2 {
-    position: relative;
-    margin: 0 auto;
-    padding: 28px 0;
-    width: max-content;
-    font-size: 60px;
-    background-image: url(../images/layouts/title/bg_talking_c.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 600px 102px;
-}
-h2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 100%;
-    background-image: url(../images/layouts/title/bg_talking_l.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 52px;
-    height: 102px;
-}
-h2::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 100%;
-    background-image: url(../images/layouts/title/bg_talking_r.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 60px;
-    height: 102px;
+    --fz: 60px;
 }
 
 h3 {
-    font-size: 44px;
+    --fz: 44px;
 }
 
 h4 {
-    font-size: 32px;
+    --fz: 32px;
 }
 
 h5, b {
-    font-size: 24px;
+    --fz: 24px;
 }
 
 button {
@@ -92,26 +55,30 @@ a {
 
 @media (max-width: 767px) {
     body {
-        font-size: 16px;
+        --fz: 16px;
     }
     
     h1 {
-        font-size: 20px;
+        --fz: 20px;
     }
     
     h2 {
-        font-size: 28px;
+        --fz: 28px;
     }
     
     h3 {
-        font-size: 24px;
+        --fz: 24px;
     }
     
     h4 {
-        font-size: 20px;
+        --fz: 20px;
     }
     
     h5, b {
-        font-size: 18px;
+        --fz: 18px;
     }
+}
+
+.pill {
+    border-radius: var(--fz);
 }
