@@ -57,7 +57,7 @@ const runStyle = css`
 	left: 10%;
 	right: 10%;
 	bottom: 0;
-	z-index: -1;
+	z-index: 1;
 
 	.f2e {
 		transform: translate(-160%, 0);

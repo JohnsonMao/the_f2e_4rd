@@ -10,9 +10,10 @@
 }
 
 body {
+    --fz: 18px;
     font-family: GenJyuuGothic-P, sans-serif;
     font-weight: normal;
-    font-size: 18px;
+    font-size: var(--fz);
     line-height: 160%;
     background-color: var(--secondary-color);
     min-height: 100vh;
@@ -23,28 +24,28 @@ h1, h2, h3, h4, h5, b
 .h1, .h2, .h3, .h4, .h5 {
     font-size: var(--fz);
 }
-h1, h2, h3, h4, h5, b {
+h1, h2, h3, h4, h5, b, .mark {
     font-weight: bold;
 }
 
 h1 {
-    --fz: 32px;
+    --fz: calc(32px - 0.32vw);
 }
 
 h2, .h2 {
-    --fz: 60px;
+    --fz: calc(60px - 0.6vw);
 }
 
 h3, .h3 {
-    --fz: 44px;
+    --fz: calc(44px - 0.44vw);
 }
 
 h4, .h4 {
-    --fz: 32px;
+    --fz: calc(32px - 0.32vw);
 }
 
-h5, .h5, b {
-    --fz: 24px;
+h5, .h5, b, .mark {
+    --fz: calc(24px - 0.24vw);
 }
 
 button {
@@ -54,6 +55,11 @@ button {
 
 a {
     text-decoration: none;
+}
+
+button *,
+a * {
+    pointer-events: none;
 }
 
 @media (max-width: 767px) {
@@ -89,5 +95,17 @@ a {
 .badge {
     display: flex;
     margin-top: 8px;
-    padding: 4px 28px;
+    padding: 0.2em 1.5em;
+}
+
+.badge-s {
+    padding: 0px 16px;
+}
+
+.border {
+    border: 2px solid var(--secondary-dark-color);
+}
+
+.mark {
+    color: var(--heightlight-color);
 }

@@ -5,7 +5,8 @@ export default function Title(props) {
 	const className = [
 		props.tag === 'h1' ? h1 : '',
 		props.tag === 'h2' ? h2 : '',
-		'gsap-title'
+		'gsap-title',
+		props.className
 	];
 
 	return (
@@ -18,7 +19,7 @@ export default function Title(props) {
 const h1 = css`
 	position: absolute;
 	left: 50%;
-	top: calc(28vh);
+	top: 22vh;
 	padding: 10px 40px;
 	color: white;
 	background-color: var(--heightlight-color);
@@ -48,7 +49,7 @@ const h2 = css`
 	&::before {
 		right: 99%;
 		background-image: url(@images/layouts/title/bg_talking_l.png);
-		width: 56px;
+		width: 54px;
 		height: 103px;
 	}
 	&::after {

@@ -1,0 +1,18 @@
+{
+	"list": [
+		[
+			{
+				"button": true,
+				"btnClassName": "alwaysHover btn-l"
+			},
+			{
+				"tag": "h2",
+				"text": "立即報名",
+				"color": "heightlight",
+				"style": {
+					"marginTop": "42px"
+				}
+			}
+		]
+	]
+}

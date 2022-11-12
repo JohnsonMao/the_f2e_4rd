@@ -62,7 +62,6 @@ export default function ReadyGo() {
 					scale: 0.4,
 					autoAlpha: 0,
 					ease: 'sine',
-					zIndex: -20,
 					force3D: false,
 					xPercent: 30,
 					yPercent: 40
@@ -100,7 +99,7 @@ const readyFrameStyle = css`
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
-	z-index: -1;
+	z-index: 2;
 
 	img {
 		position: relative;

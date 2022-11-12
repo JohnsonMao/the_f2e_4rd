@@ -15,22 +15,62 @@
 			{
 				"img": "/section3/week_1.png",
 				"flexStyle": {
-					"flex": "0 0 33.2%"
+					"flex": "0 0 20%"
 				}
 			},
 			{
 				"text": [
-					{ "text": "WEEK 1" },
-					{ "text": "The F2E 活動網站設計" },
-					{ "text": "Parallax Scrolling" },
-					{ "text": "#版塊設計" },
-					{ "text": "查看關卡細節" }
+					{
+						"tag": "b",
+						"text": "WEEK 1",
+						"className": "h2",
+						"color": "heightlight"
+					},
+					{
+						"tag": "h3",
+						"text": "The F2E 活動網站設計"
+					},
+					{
+						"group": {
+							"tag": "div",
+							"style": {
+								"display": "flex"
+							}
+						},
+						"text": [
+							{
+								"tag": "b",
+								"text": "Parallax Scrolling",
+								"className": "pill badge badge-s border",
+								"color": "secondary-dark",
+								"style": {
+									"marginRight": "12px"
+								}
+							},
+							{
+								"tag": "b",
+								"text": "#版塊設計",
+								"className": "pill badge badge-s border",
+								"color": "secondary-dark"
+							}
+						]
+					},
+					{
+						"tag": "a",
+						"text": "查看關卡細節",
+						"className": "pill badge badge-s",
+						"bg": "secondary-dark",
+						"color": "white",
+						"style": {
+							"border": "1px solid var(--secondary-dark-color)"
+						}
+					}
 				],
 				"flexStyle": {
-					"flex": "0 0 33.2%",
+					"flex": "0 0 60%",
 					"marginRight": "auto",
 					"flexDirection": "column",
-                    "alignItems": "start"
+					"alignItems": "start"
 				}
 			}
 		],
@@ -38,22 +78,62 @@
 			{
 				"img": "/section3/week_2.png",
 				"flexStyle": {
-					"flex": "0 0 33.2%"
+					"flex": "0 0 20%"
 				}
 			},
 			{
 				"text": [
-					{ "text": "WEEK 2" },
-					{ "text": "今晚，我想來點點簽" },
-					{ "text": "Canvas" },
-					{ "text": "#凱鈿行動科技" },
-					{ "text": "查看關卡細節" }
+					{
+						"tag": "b",
+						"text": "WEEK 2",
+						"className": "h2",
+						"color": "heightlight"
+					},
+					{
+						"tag": "h3",
+						"text": "今晚，我想來點點簽"
+					},
+					{
+						"group": {
+							"tag": "div",
+							"style": {
+								"display": "flex"
+							}
+						},
+						"text": [
+							{
+								"tag": "b",
+								"text": "Canvas",
+								"className": "pill badge badge-s border",
+								"color": "secondary-dark",
+								"style": {
+									"marginRight": "12px"
+								}
+							},
+							{
+								"tag": "b",
+								"text": "#凱鈿行動科技",
+								"className": "pill badge badge-s border",
+								"color": "secondary-dark"
+							}
+						]
+					},
+					{
+						"tag": "a",
+						"text": "查看關卡細節",
+						"className": "pill badge badge-s",
+						"bg": "secondary-dark",
+						"color": "white",
+						"style": {
+							"border": "1px solid var(--secondary-dark-color)"
+						}
+					}
 				],
 				"flexStyle": {
-					"flex": "0 0 33.2%",
+					"flex": "0 0 60%",
 					"marginLeft": "auto",
 					"flexDirection": "column",
-                    "alignItems": "end"
+					"alignItems": "flex-end"
 				}
 			}
 		],
@@ -61,22 +141,62 @@
 			{
 				"img": "/section3/week_3.png",
 				"flexStyle": {
-					"flex": "0 0 33.2%"
+					"flex": "0 0 20%"
 				}
 			},
 			{
 				"text": [
-					{ "text": "WEEK 3" },
-					{ "text": "Scrum 新手村" },
-					{ "text": "JS draggable" },
-					{ "text": "#鈦坦科技" },
-					{ "text": "查看關卡細節" }
+					{
+						"tag": "b",
+						"text": "WEEK 3",
+						"className": "h2",
+						"color": "heightlight"
+					},
+					{
+						"tag": "h3",
+						"text": "Scrum 新手村"
+					},
+					{
+						"group": {
+							"tag": "div",
+							"style": {
+								"display": "flex"
+							}
+						},
+						"text": [
+							{
+								"tag": "b",
+								"text": "JS draggable",
+								"className": "pill badge badge-s border",
+								"color": "secondary-dark",
+								"style": {
+									"marginRight": "12px"
+								}
+							},
+							{
+								"tag": "b",
+								"text": "#鈦坦科技",
+								"className": "pill badge badge-s border",
+								"color": "secondary-dark"
+							}
+						]
+					},
+					{
+						"tag": "a",
+						"text": "查看關卡細節",
+						"className": "pill badge badge-s",
+						"bg": "secondary-dark",
+						"color": "white",
+						"style": {
+							"border": "1px solid var(--secondary-dark-color)"
+						}
+					}
 				],
 				"flexStyle": {
-					"flex": "0 0 33.2%",
+					"flex": "0 0 60%",
 					"marginRight": "auto",
 					"flexDirection": "column",
-                    "alignItems": "start"
+					"alignItems": "start"
 				}
 			}
 		]

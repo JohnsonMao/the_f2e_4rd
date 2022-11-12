@@ -7,14 +7,19 @@ import JoinButton from './layout/JoinButton';
 import Map from './layout/Map';
 import Run from './layout/Run';
 import Section from './Section';
-import sectionsConfig from '@/assets/config/sections';
 
 export default function layout() {
+	const sectionModules = import.meta.glob('/src/assets/config/sections/*.json', {
+		eager: true,
+		import: 'default'
+	});
+	const sectionsConfig = Object.values(sectionModules);
+
 	return (
 		<LayoutContainer length={sectionsConfig.length}>
 			<Sidebar />
 			{sectionsConfig.map((section, index) => (
-				<Section key={index} section={section} />
+				<Section key={index} index={index} section={section} />
 			))}
 			<Logo />
 			<User />

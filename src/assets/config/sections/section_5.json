@@ -1,3 +1,22 @@
 {
-    "scaleIn": "區區修練已經無法滿足了嗎？"
+    "title": {
+        "className": "h2",
+        "text": "區區修練已經無法滿足了嗎？",
+        "style": {
+            "color":"var(--heightlight-color)",
+            "fontWeight": "bold",
+            "textAlign": "center"
+        }
+    },
+    "bg": [
+        {
+            "top": "36%",
+            "img": "/section5/bg_decorate_1.png"
+        },
+        {
+            "top": "36%",
+            "right": "0",
+            "img": "/section5/bg_decorate_2.png"
+        }
+    ]
 }

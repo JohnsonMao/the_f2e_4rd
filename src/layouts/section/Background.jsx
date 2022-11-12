@@ -78,7 +78,7 @@ export default function Background({ section }) {
 							`/src/assets/images/sections${bg.img}`
 						]}
 						alt="background"
-						className={slowShake}
+						className={bg.top ? slowShake : ''}
 						style={{
 							animationDelay: i + 's'
 						}}

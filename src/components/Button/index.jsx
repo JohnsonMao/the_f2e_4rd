@@ -3,9 +3,14 @@ import Hand from '@images/layouts/common/btn_join_hand.png';
 import Btn from '@images/layouts/common/btn_join.png';
 import { fastShake } from '@styles/animations/ShakeAnim';
 
-export default function Button() {
+export default function Button(props) {
+    const className = [
+        btnStyle,
+        props.className
+    ]
+
 	return (
-		<button className={btnStyle}>
+		<button className={className.join(' ')}>
 			<img
 				className={[fastShake, 'hover'].join(' ')}
 				src={Hand}
@@ -26,7 +31,11 @@ const btnStyle = css`
         opacity: 0;
     }
 
-    &:hover .hover {
+    &:hover .hover,
+    &.alwaysHover .hover {
         opacity: 1;
+    }
+    &.btn-l {
+        transform: scale(1.5);
     }
 `;

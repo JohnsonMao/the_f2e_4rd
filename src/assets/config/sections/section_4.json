@@ -1,22 +1,81 @@
 {
-    "list": [
-        {
-            "title": "SIGN UP",
-            "subtitle": "10/13 - 11/6",
-            "text": "截止前可修改報名組別",
-            "button": ""
-        },
-        {
-            "title": "START",
-            "subtitle": "10/31 - 11/28",
-            "text": "10/31(一) UI、團體組開賽\n11/7(一) 前端組開賽",
-            "img": "/section4/start.png"
-        },
-        {
-            "title": "UPLOAD",
-            "subtitle": "10/31 - 11/28",
-            "text": "依賽程登錄作品\n額外競賽： 主題豐厚獎金等著你",
-            "img": "/section4/upload.png"
-        }
-    ]
+	"list": [
+		[
+			{
+				"button": true
+			},
+			{
+				"tag": "b",
+				"text": "SIGN UP",
+				"className": "h2",
+				"color": "heightlight"
+			},
+			{
+				"tag": "h4",
+				"text": "10/13 - 11/6",
+				"className": "pill badge",
+				"bg": "primary",
+				"color": "white"
+			},
+			{
+                "tag": "b",
+				"text": "截止前可修改報名組別",
+                "color": "secondary-dark"
+			}
+		],
+		[
+			{
+				"img": "/section4/start.png"
+			},
+			{
+				"tag": "b",
+				"text": "START",
+				"className": "h2",
+				"color": "heightlight"
+			},
+			{
+				"tag": "h4",
+				"text": "10/31 - 11/28",
+				"className": "pill badge",
+				"bg": "primary",
+				"color": "white"
+			},
+			{
+                "tag": "b",
+				"text": "10/31(一) UI、團體組開賽\n11/7(一) 前端組開賽",
+                "color": "secondary-dark",
+				"style": {
+					"whiteSpace": "pre"
+				}
+			}
+		],
+		[
+			{
+				"img": "/section4/upload.png"
+			},
+			{
+				"tag": "b",
+				"text": "UPLOAD",
+				"className": "h2",
+				"color": "heightlight"
+			},
+			{
+				"tag": "h4",
+				"text": "10/31 - 11/28",
+				"className": "pill badge",
+				"bg": "primary",
+				"color": "white"
+			},
+			{
+                "tag": "b",
+				"text": "依賽程登錄作品",
+                "color": "secondary-dark"
+			},
+            {
+				"text": "額外競賽： 主題豐厚獎金等著你",
+                "color": "heightlight"
+
+            }
+		]
+	]
 }
