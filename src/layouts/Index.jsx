@@ -26,7 +26,8 @@ export default function layout() {
 }
 
 const LayoutContainer = styled.div`
-	--layout-width: min(1440px, 100vh, 90vw);
+	--layout-width: min(1440px, 90vw);
+
 	position: relative;
 	margin: 0 auto;
 	width: var(--layout-width);

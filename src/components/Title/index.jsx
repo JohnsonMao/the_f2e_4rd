@@ -29,7 +29,7 @@ const h1 = css`
 const h2 = css`
 	position: relative;
 	margin: 0 auto;
-	padding: 28px 0;
+	padding: 28px 4px;
 	width: max-content;
 	background-image: url(@images/layouts/title/bg_talking_c.png);
 	background-size: cover;
@@ -40,21 +40,21 @@ const h2 = css`
 	&::after {
 		content: '';
 		position: absolute;
-		top: 0;
+		top: -1%;
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
 
 	&::before {
-		right: 100%;
+		right: 99%;
 		background-image: url(@images/layouts/title/bg_talking_l.png);
-		width: 52px;
-		height: 102px;
+		width: 56px;
+		height: 103px;
 	}
 	&::after {
-		left: 100%;
+		left: 99%;
 		background-image: url(@images/layouts/title/bg_talking_r.png);
-		width: 60px;
-		height: 102px;
+		width: 54px;
+		height: 104px;
 	}
 `;

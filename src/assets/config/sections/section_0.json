@@ -1,10 +1,9 @@
 {
+    "width": 10,
     "title": {
         "tag": "h1",
         "text": "互動式網頁設計"
     },
-    "flex": 10,
-    "col": 4,
     "list": [
         [
             {
@@ -22,12 +21,7 @@
                 "text": 920,
                 "bg": "primary",
                 "color": "white",
-                "className": "pill",
-                "style": {
-                    "display": "flex",
-                    "marginTop": "8px",
-                    "padding": "4px 28px"
-                }
+                "className": "pill badge"
             }
         ],
         [
@@ -46,12 +40,7 @@
                 "text": 110,
                 "bg": "primary",
                 "color": "white",
-                "className": "pill",
-                "style": {
-                    "display": "flex",
-                    "marginTop": "8px",
-                    "padding": "4px 28px"
-                }
+                "className": "pill badge"
             }
         ],
         [
@@ -70,12 +59,7 @@
                 "text": 41,
                 "bg": "primary",
                 "color": "white",
-                "className": "pill",
-                "style": {
-                    "display": "flex",
-                    "marginTop": "8px",
-                    "padding": "4px 28px"
-                }
+                "className": "pill badge"
             }
         ]
     ],

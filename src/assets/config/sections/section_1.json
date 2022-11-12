@@ -8,23 +8,42 @@
         [
             {   
                 "tag": "h4",
-                "text": "羨慕別人的酷酷網頁動畫？",
-                "img": "/section1/question_1.png"
+                "text": "羨慕別人的酷酷網頁動畫？"
+            },
+            {
+                "img": "/section1/question_1.png",
+                "alt": "羨慕別人的酷酷網頁動畫？"
             }
         ],
         [
             {   
                 "tag": "h4",
-                "text": "滿足不了同事的許願？",
-                "img": "/section1/question_2.png"
+                "text": "滿足不了同事的許願？"
+            },
+            {
+                "img": "/section1/question_2.png",
+                "alt": "滿足不了同事的許願？"
             }
         ],
         [
             {   
                 "tag": "h4",
-                "text": "動畫技能樹太雜無從下手？",
-                "img": "/section1/question_3.png"
+                "text": "動畫技能樹太雜無從下手？"
+            },
+            {
+                "img": "/section1/question_3.png",
+                "alt": "動畫技能樹太雜無從下手？"
             }
         ]
+    ],
+    "bg": [
+        {
+            "position": "bottom left",
+            "img": "/section1/bg_decorate_1.png"
+        },
+        {
+            "position": "bottom right",
+            "img": "/section1/bg_decorate_1.png"
+        }
     ]
 }

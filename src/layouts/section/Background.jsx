@@ -1,5 +1,7 @@
+import Img from '@/components/Img';
 import squiggly from '@styles/animations/SquigglyAnim';
 import { slowShake } from '@styles/animations/ShakeAnim';
+import { styled } from '@linaria/react';
 
 export default function Background({ section }) {
 	// useLayoutEffect(() => {
@@ -57,21 +59,11 @@ export default function Background({ section }) {
 	return (
 		<>
 			{section.bg.map((bg, i) => (
-				<div
+				<backgroundContainer
 					key={i}
-					className={[squiggly, 'gsap-bg', bg.position].join(' ')}
-					style={{
-						// position: 'fixed',
-						// top: bg.position.includes('centerY') ? '36%' : '',
-						// bottom: bg.position.includes('bottom') ? '0' : '',
-						// left: bg.position.includes('left') ? '14%' : '',
-						// right: bg.position.includes('right') ? '10%' : '',
-						width: i ? '25%' : '22%',
-						zIndex: -10,
-						userSelect: 'none'
-					}}
+					className={[squiggly, 'gsap-bg'].join(' ')}
 				>
-					<img
+					<Img
 						width="100%"
 						src={import.meta.resolve(
 							`/src/assets/images/sections${bg.img}`
@@ -82,8 +74,19 @@ export default function Background({ section }) {
 							animationDelay: i + 's'
 						}}
 					/>
-				</div>
+				</backgroundContainer>
 			))}
 		</>
 	);
 }
+
+const backgroundContainer = styled.div`
+	position: absolute;
+	top: ${props => props.top || ''};
+	left: ${props => props.left || ''};
+	right: ${props => props.right || ''};
+	bottom: ${props => props.bottom || ''};
+	width: ${props => props.width || '30%'};
+	z-index: -10;
+	user-select: none;
+`

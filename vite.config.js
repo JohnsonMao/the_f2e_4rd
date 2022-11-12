@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => {
 			{
 				...linaria({
 					include: ['**/*.{js,jsx}'],
+					sourceMap: true,
 					babelOptions: {
 						presets: [
 							'@babel/preset-env',

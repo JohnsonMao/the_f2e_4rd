@@ -42,7 +42,7 @@ export default function Section({ section }) {
 	const titleProps = section.title instanceof Object ? section.title : '';
 
 	return (
-		<Tag>
+		<Tag style={{ position: 'relative' }}>
 			<Title {...titleProps}>
 				{section.title?.text || section.title}
 			</Title>

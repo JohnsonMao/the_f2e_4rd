@@ -1,45 +1,58 @@
 import { css, cx } from '@linaria/core';
+import Img from '@/components/Img';
 
 export default function List({ section }) {
-	const flexWidth = section.flex === 10 ? flex10 : flex12;
-	const col = section.col ? 'col' : '';
-
 	return (
-		<ul className={cx(container, flex, flexWidth)}>
+		<ul
+			className={cx(container, flex)}
+			style={{
+				'--flex-width': section.width || 12
+			}}
+		>
 			{section.list.map((item, index) => (
 				<li
 					key={index}
-					className={[flex, col, 'gsap-text'].join(' ')}
+					className={[flex, 'col', 'gsap-text'].join(' ')}
 					style={{
-						'--col': section.col
+						'--col': section.col || 4
 					}}
 				>
 					{Array.isArray(item) &&
-						item.map((t, i) => {
-							const Tag = t.tag || 'span';
+						item.map((s, i) => {
+							const Tag = s.tag || 'span';
 
 							return (
-								<Tag
-									key={i}
-									className={t.className}
-									style={{
-										background: `var(--${t.bg}-color)`,
-										color: `var(--${t.color}-color)`,
-										...t.style
-									}}
-								>
-									{t.prefixImg && (
-										<img
+								<div key={i}>
+									<Tag
+										className={s.className}
+										style={{
+											background: `var(--${s.bg}-color)`,
+											color: `var(--${s.color}-color)`,
+											...s.style
+										}}
+									>
+										{s.prefixImg && (
+											<img
+												src={import.meta.resolve(
+													`/src/assets/images/layouts${s.prefixImg}`
+												)}
+												width={s.prefixW}
+												alt={s.prefixAlt}
+												style={s.prefixStyle}
+											/>
+										)}
+										{s.text}
+									</Tag>
+									{s.img && (
+										<Img
+											width="100%"
 											src={import.meta.resolve(
-												`/src/assets/images/layouts${t.prefixImg}`
+												`/src/assets/images/sections${s.img}`
 											)}
-											width={t.prefixW}
-											alt={t.prefixAlt}
-											style={t.prefixStyle}
+											alt={s.alt}
 										/>
 									)}
-									{t.text}
-								</Tag>
+								</div>
 							);
 						})}
 				</li>
@@ -63,15 +76,7 @@ const flex = css`
 `;
 
 const container = css`
-	height: 100vh;
-`
-
-const flex10 = css`
 	margin: 0 auto;
-	width: calc(var(--layout-width) * 0.8);
-`;
-
-const flex12 = css`
-	left: 0;
-	width: var(--layout-width);
+	height: 100vh;
+	width: calc(var(--layout-width) * (var(--flex-width) / 12));
 `;
