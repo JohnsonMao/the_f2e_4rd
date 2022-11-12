@@ -5,7 +5,6 @@ import MenuControl from '@images/layouts/sidebar/menu_control.png';
 import { ReactComponent as Right } from '@images/layouts/sidebar/right.svg';
 import sidebarConfig from '@/assets/config/sidebar.json';
 import squiggly from '@styles/animations/SquigglyAnim';
-import { getAssetsFile } from '@/utils';
 
 export default function Sidebar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +13,10 @@ export default function Sidebar() {
 	const maskOpacity = isOpen ? 0.8 : 0;
 	const maskPointerEvents = isOpen ? 'auto' : 'none';
 	const transform = isOpen ? 'translate(-90%, -50%) rotate(180deg)' : '';
+	const sidebarImg = import.meta.glob('/src/assets/images/layouts/sidebar/*.png', {
+		eager: true,
+		import: 'default'
+	});
 
 	return (
 		<>
@@ -23,9 +26,9 @@ export default function Sidebar() {
 						<li key={text}>
 							<a href="/">
 								<img
-									src={getAssetsFile(
+									src={sidebarImg[
 										`/src/assets/images/layouts/sidebar/${icon}`
-									)}
+									]}
 									width="60"
 									alt={text}
 								/>

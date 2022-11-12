@@ -2,7 +2,6 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import Img from '@/components/Img';
 import Button from '@/components/Button';
-import { getAssetsFile } from '@/utils';
 import Text from './Text';
 
 export default function List({ section }) {
@@ -13,6 +12,11 @@ export default function List({ section }) {
 		}
 		return result || 'column';
 	}
+	
+	const sectionImg = import.meta.glob('/src/assets/images/sections/**/*.png', {
+		eager: true,
+		import: 'default'
+	});
 
 	return (
 		<Flex as="ul" className={container} width={section.width}>
@@ -38,9 +42,9 @@ export default function List({ section }) {
 									{s.img && (
 										<Img
 											width="100%"
-											src={getAssetsFile(
+											src={sectionImg[
 												`/src/assets/images/sections${s.img}`
-											)}
+											]}
 											alt={s.alt}
 										/>
 									)}

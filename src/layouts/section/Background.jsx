@@ -2,7 +2,6 @@ import { styled } from '@linaria/react';
 import Img from '@/components/Img';
 import squiggly from '@styles/animations/SquigglyAnim';
 import { slowShake } from '@styles/animations/ShakeAnim';
-import { getAssetsFile } from '@/utils';
 
 export default function Background({ section }) {
 	// useLayoutEffect(() => {
@@ -56,6 +55,10 @@ export default function Background({ section }) {
 
 	// 	return () => ctx.revert();
 	// }, []);
+	const sectionImg = import.meta.glob('/src/assets/images/sections/**/*.png', {
+		eager: true,
+		import: 'default'
+	});
 
 	return (
 		<>
@@ -71,9 +74,9 @@ export default function Background({ section }) {
 				>
 					<Img
 						width="100%"
-						src={getAssetsFile(
+						src={sectionImg[
 							`/src/assets/images/sections${bg.img}`
-						)}
+						]}
 						alt="background"
 						className={slowShake}
 						style={{
