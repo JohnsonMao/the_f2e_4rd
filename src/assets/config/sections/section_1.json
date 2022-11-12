@@ -3,7 +3,6 @@
         "tag": "h2",
         "text": "你是否也有以下困擾？"
     },
-    "col": 4,
     "list": [
         [
             {   
@@ -38,11 +37,15 @@
     ],
     "bg": [
         {
-            "position": "bottom left",
+            "bottom": "0",
+            "left": "20%",
+            "width": "12%",
             "img": "/section1/bg_decorate_1.png"
         },
         {
-            "position": "bottom right",
+            "bottom": "0",
+            "right": "20%",
+            "width": "12%",
             "img": "/section1/bg_decorate_1.png"
         }
     ]

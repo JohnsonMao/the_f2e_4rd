@@ -1,7 +1,8 @@
+import { styled } from '@linaria/react';
 import Img from '@/components/Img';
 import squiggly from '@styles/animations/SquigglyAnim';
 import { slowShake } from '@styles/animations/ShakeAnim';
-import { styled } from '@linaria/react';
+import { getAssetsFile } from '@/utils';
 
 export default function Background({ section }) {
 	// useLayoutEffect(() => {
@@ -59,13 +60,18 @@ export default function Background({ section }) {
 	return (
 		<>
 			{section.bg.map((bg, i) => (
-				<backgroundContainer
+				<BackgroundContainer
 					key={i}
 					className={[squiggly, 'gsap-bg'].join(' ')}
+					top={bg.top}
+					left={bg.left}
+					right={bg.right}
+					bottom={bg.bottom}
+					width={bg.width}
 				>
 					<Img
 						width="100%"
-						src={import.meta.resolve(
+						src={getAssetsFile(
 							`/src/assets/images/sections${bg.img}`
 						)}
 						alt="background"
@@ -74,19 +80,19 @@ export default function Background({ section }) {
 							animationDelay: i + 's'
 						}}
 					/>
-				</backgroundContainer>
+				</BackgroundContainer>
 			))}
 		</>
 	);
 }
 
-const backgroundContainer = styled.div`
+const BackgroundContainer = styled.div`
 	position: absolute;
 	top: ${props => props.top || ''};
 	left: ${props => props.left || ''};
 	right: ${props => props.right || ''};
 	bottom: ${props => props.bottom || ''};
 	width: ${props => props.width || '30%'};
-	z-index: -10;
+	z-index: ${props => props.zIndex || '-10'};
 	user-select: none;
 `

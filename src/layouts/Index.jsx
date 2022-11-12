@@ -6,7 +6,7 @@ import Sidebar from './layout/Sidebar';
 import JoinButton from './layout/JoinButton';
 import Map from './layout/Map';
 import Run from './layout/Run';
-import Section from './section';
+import Section from './Section';
 import sectionsConfig from '@/assets/config/sections';
 
 export default function layout() {

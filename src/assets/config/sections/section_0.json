@@ -14,8 +14,8 @@
                 "tag": "b",
                 "prefixImg": "/common/personIcon.svg",
                 "prefixAlt": "person",
-                "prefixW": "22px",
                 "prefixStyle": {
+                    "width": "22px",
                     "paddingRight": "8px"
                 },
                 "text": 920,
@@ -33,8 +33,8 @@
                 "tag": "b",
                 "prefixImg": "/common/personIcon.svg",
                 "prefixAlt": "person",
-                "prefixW": "22px",
                 "prefixStyle": {
+                    "width": "22px",
                     "paddingRight": "8px"
                 },
                 "text": 110,
@@ -52,8 +52,8 @@
                 "tag": "b",
                 "prefixImg": "/common/personIcon.svg",
                 "prefixAlt": "person",
-                "prefixW": "22px",
                 "prefixStyle": {
+                    "width": "22px",
                     "paddingRight": "8px"
                 },
                 "text": 41,
@@ -65,11 +65,12 @@
     ],
     "bg": [
         {
-            "position": "centerY left",
+            "top": "36%",
             "img": "/section0/bg_decorate_1.png"
         },
         {
-            "position": "centerY right",
+            "top": "36%",
+            "right": "0",
             "img": "/section0/bg_decorate_2.png"
         }
     ]

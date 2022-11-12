@@ -32,9 +32,9 @@ const h2 = css`
 	padding: 28px 4px;
 	width: max-content;
 	background-image: url(@images/layouts/title/bg_talking_c.png);
-	background-size: cover;
 	background-repeat: no-repeat;
-	background-size: 600px 102px;
+	background-size: 100% 103px;
+	margin-bottom: 1rem;
 
 	&::before,
 	&::after {

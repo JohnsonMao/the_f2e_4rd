@@ -1,12 +1,7 @@
-import React, { useLayoutEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { styled } from '@linaria/react';
+import { css } from '@linaria/core';
 
-import sectionsConfig from '@/assets/config/sections';
 import Background from './Background';
 import List from './List';
-import { show, hide } from '@/utils';
 import Title from '@/components/Title';
 
 export default function Section({ section }) {
@@ -39,15 +34,38 @@ export default function Section({ section }) {
 	// }, []);
 
 	const Tag = section.tag || 'section';
-	const titleProps = section.title instanceof Object ? section.title : '';
+	const getProps = (key) =>
+		section[key] instanceof Object ? section[key] : '';
+	const titleProps = getProps('title');
+	const subtitleProps = getProps('subtitle');
+	const SubtitleTag = subtitleProps.tag || 'div';
 
 	return (
-		<Tag style={{ position: 'relative' }}>
+		<Tag className={sectionStyle}>
 			<Title {...titleProps}>
 				{section.title?.text || section.title}
 			</Title>
+			<SubtitleTag
+				{...subtitleProps}
+				className={'subtitle ' + subtitleProps.className}
+			>
+				{section.subtitle?.text || section.subtitle}
+			</SubtitleTag>
 			{Array.isArray(section.list) && <List section={section} />}
 			{Array.isArray(section.bg) && <Background section={section} />}
 		</Tag>
 	);
 }
+
+const sectionStyle = css`
+	position: relative;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	.subtitle {
+		color: var(--secondary-dark-color);
+		text-align: center;
+		white-space: pre;
+	}
+`;

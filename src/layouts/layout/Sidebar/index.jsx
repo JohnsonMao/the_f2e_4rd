@@ -5,6 +5,7 @@ import MenuControl from '@images/layouts/sidebar/menu_control.png';
 import { ReactComponent as Right } from '@images/layouts/sidebar/right.svg';
 import sidebarConfig from '@/assets/config/sidebar.json';
 import squiggly from '@styles/animations/SquigglyAnim';
+import { getAssetsFile } from '@/utils';
 
 export default function Sidebar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ export default function Sidebar() {
 						<li key={text}>
 							<a href="/">
 								<img
-									src={import.meta.resolve(
+									src={getAssetsFile(
 										`/src/assets/images/layouts/sidebar/${icon}`
 									)}
 									width="60"

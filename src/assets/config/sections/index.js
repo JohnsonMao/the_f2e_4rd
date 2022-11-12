@@ -6,8 +6,6 @@ import section_4 from './section_4.json';
 import section_5 from './section_5.json';
 import section_6 from './section_6.json';
 import section_7 from './section_7.json';
-console.log(section_0)
-console.log(section_2)
 
 const sections = [
     section_0,

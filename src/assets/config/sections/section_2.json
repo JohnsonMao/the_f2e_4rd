@@ -1,18 +1,46 @@
 {
-    "title": "本屆主題：互動式網頁設計",
-    "subtitle": "以下兩個角色進行攜手合作",
+    "width": 10,
+    "title": {
+        "tag": "h2",
+        "text": "本屆主題：互動式網頁設計"
+    },
+    "subtitle": {
+        "text": "以下兩個角色進行攜手合作",
+        "className": "h5"
+    },
     "list": [
-        {
-            "title": "前端工程師",
-            "button": ""
-        },
-        {
-            "title": "UI 設計師",
-            "button": ""
-        },
-        {
-            "title": "團體組(UI + 前端)",
-            "button": ""
-        }
+        [
+            {
+                "text": "前端工程師",
+                "className": "h4",
+                "flexDirection": "column",
+                "button": true,
+                "style": {
+                    "margin": "16px 0 360px"
+                }
+            }
+        ],
+        [
+            {
+                "text": "UI 設計師",
+                "className": "h4",
+                "flexDirection": "column",
+                "button": true,
+                "style": {
+                    "margin": "16px 0 360px"
+                }
+            }
+        ],
+        [
+            {
+                "text": "團體組(UI + 前端)",
+                "className": "h4",
+                "flexDirection": "column",
+                "button": true,
+                "style": {
+                    "margin": "16px 0 360px"
+                }
+            }
+        ]
     ]
 }
