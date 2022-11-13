@@ -20,6 +20,11 @@ export default function Sidebar() {
 
 	return (
 		<>
+			<Mask
+				opacity={maskOpacity}
+				pointerEvents={maskPointerEvents}
+				onClick={() => setIsOpen(false)}
+			/>
 			<SidebarStyle className={cx(squiggly)} open={open}>
 				<ul>
 					{sidebarConfig.map(({ icon, text }) => (
@@ -45,11 +50,6 @@ export default function Sidebar() {
 					<Right style={{ transform }} />
 				</button>
 			</SidebarStyle>
-			<Mask
-				opacity={maskOpacity}
-				pointerEvents={maskPointerEvents}
-				onClick={() => setIsOpen(false)}
-			/>
 		</>
 	);
 }
@@ -113,4 +113,5 @@ const Mask = styled.div`
 	opacity: ${(props) => props.opacity};
 	transition: opacity 0.3s;
 	pointer-events: ${(props) => props.pointerEvents};
+	z-index: var(--top);
 `;

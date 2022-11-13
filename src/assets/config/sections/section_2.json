@@ -16,7 +16,7 @@
                 "flexDirection": "column",
                 "button": true,
                 "style": {
-                    "margin": "16px 0 360px"
+                    "margin": "16px 0 12vh"
                 }
             }
         ],
@@ -27,7 +27,7 @@
                 "flexDirection": "column",
                 "button": true,
                 "style": {
-                    "margin": "16px 0 360px"
+                    "margin": "16px 0 12vh"
                 }
             }
         ],
@@ -38,7 +38,7 @@
                 "flexDirection": "column",
                 "button": true,
                 "style": {
-                    "margin": "16px 0 360px"
+                    "margin": "16px 0 12vh"
                 }
             }
         ]

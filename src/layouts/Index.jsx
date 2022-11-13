@@ -1,5 +1,6 @@
-import React from 'react';
+import { useCallback } from 'react';
 import { styled } from '@linaria/react';
+import { useTimeline } from '@/hooks';
 import Logo from './layout/Logo';
 import User from './layout/User';
 import Sidebar from './layout/Sidebar';
@@ -8,11 +9,15 @@ import Map from './layout/Map';
 import Run from './layout/Run';
 import Section from './Section';
 
-export default function layout() {
-	const sectionModules = import.meta.glob('/src/assets/config/sections/*.json', {
-		eager: true,
-		import: 'default'
-	});
+export default function Layout() {
+	const sectionModules = import.meta.glob(
+		'/src/assets/config/sections/*.json',
+		{
+			eager: true,
+			import: 'default'
+		}
+	);
+
 	const sectionsConfig = Object.values(sectionModules);
 
 	return (
@@ -25,9 +30,9 @@ export default function layout() {
 			<User />
 			<JoinButton />
 			<Map />
-			<Run />
+			<Run length={sectionsConfig.length}/>
 		</LayoutContainer>
-	)
+	);
 }
 
 const LayoutContainer = styled.div`

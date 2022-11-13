@@ -1,5 +1,6 @@
 {
 	"width": 10,
+	"gap": "32px",
 	"title": {
 		"tag": "h2",
 		"text": "贊助單位"
@@ -42,16 +43,19 @@
 			}
 		]
 	],
+    "bgType": "tree",
     "bg": [
         {
             "bottom": "0",
-            "left": "20%",
+            "left": "5%",
+            "zIndex": "10",
             "width": "20%",
             "img": "/section7/bg_decorate_1.png"
         },
         {
             "bottom": "0",
-            "right": "20%",
+            "right": "5%",
+            "zIndex": "10",
             "width": "20%",
             "img": "/section7/bg_decorate_2.png"
         }

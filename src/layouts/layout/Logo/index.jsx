@@ -50,4 +50,5 @@ const logoStyle = css`
 	left: 30px;
 	width: 14%;
 	max-width: 250px;
+	opacity: 0;
 `;

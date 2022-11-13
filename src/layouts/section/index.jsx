@@ -1,150 +1,114 @@
-import { useCallback, useLayoutEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useCallback } from 'react';
 import { css } from '@linaria/core';
 
+import Title from '@/components/Title';
+import { useTimeline } from '@/hooks';
+import * as gsapSetting from '@/utils/gsapSetting';
 import Background from './Background';
 import List from './List';
-import Title from '@/components/Title';
-import { show, hide } from '@/utils';
-import { useTimeline } from '@/hooks';
 
 export default function Section({ section, index }) {
-	const exec = useCallback((tl) => {
-		if (index !== 0) {
-			tl.from('.gsap-text', {
-				autoAlpha: 0,
-				force3D: false
-			})
-				.from(
-					'.gsap-title',
+	const Tag = section.tag || 'section';
+
+	const trigger = `.${sectionStyle}`;
+
+	const [ref] = useTimeline({
+		trigger,
+		markers: false,
+		scrub: true,
+		pin: true
+	});
+
+	return (
+		<Tag ref={ref}>
+			<div className={[sectionStyle, `section-${index}`].join(' ')}>
+				{section.title && (
+					<TitleContainer section={section} index={index} />
+				)}
+				{section.subtitle && (
+					<TitleContainer
+						section={section}
+						isSubtitle={true}
+						index={index}
+					/>
+				)}
+				{Array.isArray(section.list) && (
+					<List section={section} index={index} />
+				)}
+				{Array.isArray(section.bg) && (
+					<Background section={section} index={index} />
+				)}
+			</div>
+		</Tag>
+	);
+}
+
+const TitleContainer = ({ section, isSubtitle, index }) => {
+	const key = isSubtitle ? 'subtitle' : 'title';
+	const props = section[key] instanceof Object ? section[key] : '';
+	const animateKey = props?.['data-animate'];
+
+	const className = isSubtitle ? 'gsap-subtitle ' : 'gsap-title ';
+	const trigger = `.gsap-${key}`;
+
+	const exec = useCallback(
+		(tl) => {
+			if (index === 0) {
+				tl.to(trigger, {
+					duration: 3,
+					autoAlpha: 1
+				});
+			} else {
+				tl.fromTo(
+					trigger,
 					{
-						autoAlpha: 0,
-						force3D: false
+						autoAlpha: 0
 					},
-					'<'
-				)
-				.from(
-					'.gsap-subtitle',
-					{
-						autoAlpha: 0,
-						force3D: false
-					},
-					'<'
-				)
-				.from(
-					'.gsap-bg',
-					{
-						autoAlpha: 0,
-						force3D: false
-					},
-					'<'
+					animateKey
+						? gsapSetting[animateKey]
+						: {
+								duration: 3,
+								autoAlpha: 1
+						}
 				);
-		}
-		tl.to('.gsap-text', {
-			autoAlpha: 0,
-			force3D: false
-		})
-			.to(
-				'.gsap-title',
-				{
-					autoAlpha: 0,
-					force3D: false
-				},
-				'<'
-			)
-			.to(
-				'.gsap-subtitle',
-				{
-					autoAlpha: 0,
-					force3D: false
-				},
-				'<'
-			)
-			.to(
-				'.gsap-bg',
-				{
-					autoAlpha: 0,
-					force3D: false
-				},
-				'<'
-			);
-	}, [index]);
+			}
+			tl.to(trigger, {
+				autoAlpha: 0
+			});
+		},
+		[trigger, index, animateKey]
+	);
 	const [ref] = useTimeline(
 		{
-			trigger: `.section-${index}`,
-			start: 'top 6%',
-			end: 'bottom 0%',
+			trigger,
+			start: 'top 20%',
+			end: 'top -80%',
 			markers: false,
-			scrub: true,
-			pin: true
+			scrub: true
 		},
 		exec
 	);
-	// useLayoutEffect(() => {
-	// 	const scrollListener = [];
-	// 	const gsapArray = [
-	// 		...gsap.utils.toArray('.gsap-text'),
-	// 		...gsap.utils.toArray('.gsap-title'),
-	// 		gsap.utils.toArray('.gsap-bg')
-	// 	];
-	// 	gsapArray.forEach(function (element) {
-	// 		scrollListener.push(
-	// 			ScrollTrigger.create({
-	// 				trigger: element,
-	// 				end: 'bottom -100%',
-	// 				scrub: true,
-	// 				markers: true,
-	// 				onEnter: function () {
-	// 					show(element);
-	// 				},
-	// 				onLeave: function () {
-	// 					hide(element);
-	// 				},
-	// 				onEnterBack: function () {
-	// 					show(element);
-	// 				},
-	// 				onLeaveBack: function () {
-	// 					hide(element);
-	// 				}
-	// 			})
-	// 		);
-	// 	});
-
-	// 	return () => scrollListener.forEach((l) => l.revert());
-	// }, []);
-
-	const Tag = section.tag || 'section';
-	const getProps = (key) =>
-		section[key] instanceof Object ? section[key] : '';
-	const titleProps = getProps('title');
-	const subtitleProps = getProps('subtitle');
-	const SubtitleTag = subtitleProps.tag || 'div';
 
 	return (
-		<div ref={ref}>
-			<Tag className={[sectionStyle, `section-${index}`].join(' ')}>
-				<Title {...titleProps}>
-					{section.title?.text || section.title}
-				</Title>
-				<SubtitleTag
-					{...subtitleProps}
-					className={'gsap-subtitle ' + subtitleProps.className}
-				>
-					{section.subtitle?.text || section.subtitle}
-				</SubtitleTag>
-				{Array.isArray(section.list) && <List section={section} />}
-				{Array.isArray(section.bg) && <Background section={section} />}
-			</Tag>
+		<div ref={ref} style={{ maxWidth: '100vw', overflow: 'hidden' }}>
+			<Title {...props} className={className + (props?.className || '')}>
+				{section[key]?.text || section[key]}
+			</Title>
 		</div>
 	);
-}
+};
 
 const sectionStyle = css`
 	position: relative;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	padding-top: 6vh;
+
+	> div {
+		display: flex;
+		justify-content: center;
+	}
 
 	.gsap-subtitle {
 		color: var(--secondary-dark-color);

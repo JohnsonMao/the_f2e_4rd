@@ -51,7 +51,7 @@ function T({ t }) {
 						) : (
 							<span key={i}>{m}</span>
 						)
-				  )
+                )
 				: t.text}
 		</Tag>
 	);

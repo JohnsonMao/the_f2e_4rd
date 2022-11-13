@@ -1,10 +1,11 @@
-import { useLayoutEffect, useState, useRef, useMemo, useEffect } from 'react';
+import { useLayoutEffect, useState, useRef, useMemo } from 'react';
 import { gsap } from 'gsap';
 
-const useTimeline = ({ trigger, markers, start, end, scrub, pin }, fn) => {
+const useTimeline = (config, fn) => {
 	const elementRef = useRef(null);
 	const savedFn = useRef(null);
 	const [timeline, setTimeline] = useState(null);
+	const { trigger, markers, start, end, scrub, pin, default: d } = config;
 
 	const scrollTrigger = useMemo(
 		() => ({
@@ -13,16 +14,15 @@ const useTimeline = ({ trigger, markers, start, end, scrub, pin }, fn) => {
 			trigger,
 			start,
 			end,
-			pin
+			pin,
+			default: d
 		}),
-		[trigger, markers, start, end, scrub, pin]
+		[trigger, markers, start, end, scrub, pin, d]
 	);
 
-	useEffect(() => {
-		savedFn.current = fn;
-	}, [fn]);
-
 	useLayoutEffect(() => {
+		savedFn.current = fn;
+
 		const ctx = gsap.context(() => {
 			const tl = gsap.timeline({ scrollTrigger });
 			setTimeline(tl);
@@ -33,7 +33,7 @@ const useTimeline = ({ trigger, markers, start, end, scrub, pin }, fn) => {
 		}, elementRef);
 
 		return () => ctx.revert();
-	}, [scrollTrigger]);
+	}, [scrollTrigger, fn]);
 
 	return [elementRef, timeline];
 };

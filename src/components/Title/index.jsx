@@ -5,7 +5,6 @@ export default function Title(props) {
 	const className = [
 		props.tag === 'h1' ? h1 : '',
 		props.tag === 'h2' ? h2 : '',
-		'gsap-title',
 		props.className
 	];
 
@@ -19,7 +18,7 @@ export default function Title(props) {
 const h1 = css`
 	position: absolute;
 	left: 50%;
-	top: 22vh;
+	top: 27vh;
 	padding: 10px 40px;
 	color: white;
 	background-color: var(--heightlight-color);
@@ -30,12 +29,17 @@ const h1 = css`
 const h2 = css`
 	position: relative;
 	margin: 0 auto;
-	padding: 28px 4px;
+	padding: 18px 4px;
 	width: max-content;
 	background-image: url(@images/layouts/title/bg_talking_c.png);
 	background-repeat: no-repeat;
 	background-size: 100% 103px;
 	margin-bottom: 1rem;
+
+	@media (max-width: 767px) {
+		width: 100%;
+		text-align: center;
+	}
 
 	&::before,
 	&::after {
@@ -44,6 +48,10 @@ const h2 = css`
 		top: -1%;
 		background-size: contain;
 		background-repeat: no-repeat;
+
+		@media (max-width: 767px) {
+			display: none;
+		}
 	}
 
 	&::before {

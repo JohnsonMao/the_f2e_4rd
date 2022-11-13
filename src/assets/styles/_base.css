@@ -14,7 +14,7 @@ body {
     font-family: GenJyuuGothic-P, sans-serif;
     font-weight: normal;
     font-size: var(--fz);
-    line-height: 160%;
+    line-height: 1;
     background-color: var(--secondary-color);
     min-height: 100vh;
     color: var(--primary-color);
@@ -62,6 +62,11 @@ a * {
     pointer-events: none;
 }
 
+.zoomIn {
+    --fz: 300px;
+    font-size: var(--fz);
+}
+
 @media (max-width: 767px) {
     body {
         --fz: 16px;
@@ -85,6 +90,10 @@ a * {
     
     h5, .h5, b {
         --fz: 18px;
+    }
+
+    .zoomIn {
+        --fz: 140px
     }
 }
 

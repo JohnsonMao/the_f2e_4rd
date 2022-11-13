@@ -4,6 +4,9 @@
         "tag": "h1",
         "text": "互動式網頁設計"
     },
+    "listStyle": {
+        "maxWidth": "820px"
+    },
     "list": [
         [
             {
@@ -66,6 +69,7 @@
     "bg": [
         {
             "top": "36%",
+            "left": "0",
             "img": "/section0/bg_decorate_1.png"
         },
         {
