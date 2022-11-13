@@ -30,6 +30,7 @@ const h2 = css`
 	position: relative;
 	margin: 0 auto;
 	padding: 18px 4px;
+	line-height: 1;
 	width: max-content;
 	background-image: url(@images/layouts/title/bg_talking_c.png);
 	background-repeat: no-repeat;

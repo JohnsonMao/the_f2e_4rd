@@ -10,6 +10,10 @@
 		"tag": "b",
 		"text": "各路廠商強強聯手\n共同設計出接地氣的網頁互動挑戰關卡"
 	},
+	"data-animate": "scroll",
+	"listStyle": {
+		"top": "50%"
+	},
 	"list": [
 		[
 			{

@@ -38,17 +38,17 @@
     "bgType": "grass",
     "bg": [
         {
-            "bottom": "0",
-            "left": "10%",
+            "bottom": "2%",
+            "left": "24%",
             "zIndex": "10",
-            "width": "12%",
+            "width": "10%",
             "img": "/section1/bg_decorate_1.png"
         },
         {
-            "bottom": "0",
-            "right": "10%",
+            "bottom": "2%",
+            "right": "24%",
             "zIndex": "10",
-            "width": "12%",
+            "width": "10%",
             "img": "/section1/bg_decorate_1.png"
         }
     ]

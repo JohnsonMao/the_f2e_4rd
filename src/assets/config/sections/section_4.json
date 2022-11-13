@@ -1,4 +1,7 @@
 {
+	"listStyle": {
+		"top": "25%"
+	},
 	"list": [
 		[
 			{
@@ -20,12 +23,20 @@
 			{
                 "tag": "b",
 				"text": "截止前可修改報名組別",
-                "color": "secondary-dark"
+                "color": "secondary-dark",
+				"style": {
+					"marginTop": "8px",
+					"paddingBottom": "34px",
+					"lineHeight": "1.4"
+				}
 			}
 		],
 		[
 			{
-				"img": "/section4/start.png"
+				"img": "/section4/start.png",
+				"style": {
+					"maxWidth": "140px"
+				}
 			},
 			{
 				"tag": "b",
@@ -45,13 +56,19 @@
 				"text": "10/31(一) UI、團體組開賽\n11/7(一) 前端組開賽",
                 "color": "secondary-dark",
 				"style": {
-					"whiteSpace": "pre"
+					"marginTop": "8px",
+					"whiteSpace": "pre",
+					"textAlign": "center",
+					"lineHeight": "1.4"
 				}
 			}
 		],
 		[
 			{
-				"img": "/section4/upload.png"
+				"img": "/section4/upload.png",
+				"style": {
+					"maxWidth": "140px"
+				}
 			},
 			{
 				"tag": "b",
@@ -69,13 +86,32 @@
 			{
                 "tag": "b",
 				"text": "依賽程登錄作品",
-                "color": "secondary-dark"
+                "color": "secondary-dark",
+				"style": {
+					"marginTop": "8px",
+					"lineHeight": "1.4"
+				}
 			},
             {
 				"text": "額外競賽： 主題豐厚獎金等著你",
-                "color": "heightlight"
-
+                "color": "heightlight",
+				"style": {
+					"lineHeight": "1.4"
+				}
             }
 		]
+	],
+	"bgType": "center",
+	"bg": [
+		{
+			"top": "42%",
+			"left": "50%",
+            "width": "85%",
+			"transform": "translateX(-50%)",
+			"img": "/section4/date_line.png",
+			"padding": "40px 0 0",
+			"beforeShadow": "12.6vw 5.5vw 0 4px var(--primary-color), 70.8vw 5.5vw 0 4px var(--primary-color), 41.8vw 3vw 0 4px var(--primary-color)",
+			"afterShadow": "12.9vw 0vw 0 1px var(--primary-color), 71.1vw 0vw 0 1px var(--primary-color), 42.1vw -2vw 0 1px var(--primary-color)"
+		}
 	]
 }

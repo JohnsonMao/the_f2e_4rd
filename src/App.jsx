@@ -4,8 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 
-import Layout from '@/layouts';
-import Cursor from '@/layouts/layout/Cursor';
+import Layout from '@/Layout';
+import Cursor from '@/Layout/Cursor';
 import { ReactComponent as SquigglySvg } from '@images/filters/squiggly.svg';
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin, MotionPathPlugin);

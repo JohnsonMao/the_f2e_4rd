@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { styled } from '@linaria/react';
 import { css, cx } from '@linaria/core';
+import Img from '@/components/Img';
 import MenuControl from '@images/layouts/sidebar/menu_control.png';
 import { ReactComponent as Right } from '@images/layouts/sidebar/right.svg';
 import sidebarConfig from '@/assets/config/sidebar.json';
@@ -30,11 +31,11 @@ export default function Sidebar() {
 					{sidebarConfig.map(({ icon, text }) => (
 						<li key={text}>
 							<a href="/">
-								<img
+								<Img
 									src={sidebarImg[
 										`/src/assets/images/layouts/sidebar/${icon}`
 									]}
-									width="60"
+									width="60px"
 									alt={text}
 								/>
 								{text}
@@ -46,7 +47,7 @@ export default function Sidebar() {
 					className={sidebarBtn}
 					onClick={() => setIsOpen(!isOpen)}
 				>
-					<img src={MenuControl} width="61" alt="菜單按鈕" />
+					<Img src={MenuControl} width="61px" alt="菜單按鈕" />
 					<Right style={{ transform }} />
 				</button>
 			</SidebarStyle>

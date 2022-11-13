@@ -13,14 +13,14 @@
 	},
 	"bg": [
 		{
-			"top": "36%",
-			"left": "0",
+			"top": "42%",
+			"left": "12%",
             "width": "20%",
 			"img": "/section5/bg_decorate_1.png"
 		},
 		{
 			"top": "36%",
-			"right": "0",
+			"right": "12%",
             "width": "20%",
 			"img": "/section5/bg_decorate_2.png"
 		}

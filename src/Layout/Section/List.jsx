@@ -6,10 +6,12 @@ import Button from '@/components/Button';
 import frame from '@/assets/images/layouts/common/frame.png';
 import light from '@/assets/images/layouts/common/light.png';
 import { useTimeline } from '@/hooks';
+import * as gsapSetting from '@/utils/gsapSetting';
 import Text from './Text';
 
-export default function List({ section, index }) {
+export default function List({ section, index, length }) {
 	const trigger = '.gsap-text';
+	const animateKey = section?.['data-animate'];
 
 	const exec = useCallback(
 		(tl) => {
@@ -20,21 +22,19 @@ export default function List({ section, index }) {
 				});
 			} else {
 				tl.fromTo(
-					trigger,
-					{
-						autoAlpha: 0
-					},
-					{
-						duration: 3,
-						autoAlpha: 1
-					}
+					`${trigger}`,
+					gsapSetting?.[`${animateKey}From`] ||
+						gsapSetting.defaultFrom,
+					gsapSetting?.[`${animateKey}To`] || gsapSetting.defaultTo
 				);
 			}
-			tl.to(trigger, {
-				autoAlpha: 0
-			});
+			if (index !== length - 1) {
+				tl.to(trigger, {
+					autoAlpha: 0
+				});
+			}
 		},
-		[trigger, index]
+		[trigger, index, length]
 	);
 	const [ref] = useTimeline(
 		{
@@ -76,7 +76,9 @@ export default function List({ section, index }) {
 					<Flex
 						as="li"
 						key={index}
-						className="col gsap-text"
+						className={['col', 'gsap-text', `item-${index}`].join(
+							' '
+						)}
 						col={section.col}
 						flexDirection={setFlexDirection(
 							section.flexDirection,
@@ -142,7 +144,10 @@ const Flex = styled.div`
 
 	> li {
 		flex: 1 0 calc(100% / var(--col));
-		/* border: 1px solid #0006; */
+	}
+
+	@media (max-width: 767px) {
+		flex-direction: column;
 	}
 `;
 
@@ -151,7 +156,7 @@ const container = css`
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: calc(var(--layout-width) * (var(--flex-width) / 12));
+	width: calc((var(--layout-width) - 180px) * (var(--flex-width) / 12));
 `;
 
 const ImgFrame = styled.div`

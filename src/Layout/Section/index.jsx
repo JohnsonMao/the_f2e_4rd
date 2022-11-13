@@ -4,10 +4,10 @@ import { css } from '@linaria/core';
 import Title from '@/components/Title';
 import { useTimeline } from '@/hooks';
 import * as gsapSetting from '@/utils/gsapSetting';
-import Background from './Background';
+import Background from '../Background';
 import List from './List';
 
-export default function Section({ section, index }) {
+export default function Section({ section, index, length }) {
 	const Tag = section.tag || 'section';
 
 	const trigger = `.${sectionStyle}`;
@@ -33,7 +33,7 @@ export default function Section({ section, index }) {
 					/>
 				)}
 				{Array.isArray(section.list) && (
-					<List section={section} index={index} />
+					<List section={section} index={index} length={length} />
 				)}
 				{Array.isArray(section.bg) && (
 					<Background section={section} index={index} />

@@ -19,4 +19,6 @@
     --white-color: white;
 
     --top: 1000;
+	--layout-width: min(1440px, 100vw);
+    --fz: 18px;
 }

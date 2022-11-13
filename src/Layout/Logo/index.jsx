@@ -16,7 +16,7 @@ export default function Logo() {
 					trigger: element,
 					start: 'top 100%',
 					end: 'bottom -90%',
-					scrub: true,
+					scrub: false,
 					markers: false,
 					onEnter: function () {
 						hide(element);

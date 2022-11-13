@@ -1,8 +1,9 @@
+import { useCallback } from 'react';
 import { css } from '@linaria/core';
+import Img from '@/components/Img';
 import startPng from '@images/sections/section0/start.png';
 import logoTextPng from '@images/layouts/common/logo_text.png';
 import { useTimeline } from '@/hooks';
-import { useCallback } from 'react';
 
 export default function Start() {
 	const trigger = '.gsap-start';
@@ -16,7 +17,7 @@ export default function Start() {
 	const [ref] = useTimeline(
 		{
 			trigger,
-			markers: true,
+			markers: false,
 			start: 'bottom -120%',
 			end: 'bottom -140%'
 		},
@@ -25,8 +26,8 @@ export default function Start() {
 	return (
 		<div ref={ref}>
 			<div className="gsap-start">
-				<img className={startStyle} src={startPng} alt="start" />
-				<img
+				<Img className={startStyle} src={startPng} alt="start" />
+				<Img
 					className={logoTextStyle}
 					src={logoTextPng}
 					alt="The F2E 4rd"
