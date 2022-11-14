@@ -1,5 +1,7 @@
 # The F2E 4rd 視差網站
 
+採用 設計師 [EG 的設計](https://2022.thef2e.com/users/12061549261454740203)
+
 ## 系統說明
 本專案使用 `vite react` ，並部署到 Github Pages，
 
